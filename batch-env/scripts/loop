@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+function usage() {
+    echo -n \
+        "Usage: $(basename "$0")
+Run a loop of GroundWork/RasterVision HITL workflow.
+--hitlProjectId: HITL project
+"
+}
+
+if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
+    if [[ "${1:-}" = "--help" ]]; then
+        usage
+    else
+        docker-compose \
+            run --rm --no-deps \
+            hitl-job
+    fi
+fi

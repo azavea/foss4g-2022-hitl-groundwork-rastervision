@@ -1,0 +1,11 @@
+version: '3'
+services:
+  hitl-job:
+      image: hitl
+      build:
+        context: .
+        dockerfile: Dockerfile
+      volumes:
+            - .:/opt/src/
+      container_name: hitl-batch
+      working_dir: /opt/src
