@@ -1,4 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.ipynb_checkpoints/
 
 notebooks/out/
 
-notebooks/.ipynb_checkpoints/
+*.qgz
+
+.history
